@@ -9,6 +9,9 @@
     <Grid>
         <ComboBox x:Name="cbPersona" ItemsSource="{Binding Path=ListaPersonas}" HorizontalAlignment="Left" Margin="79,73,0,0" VerticalAlignment="Top" Width="447" Height="28" FontSize="16"/>
         <Label Content="Ejemplo Bindings" HorizontalAlignment="Left" Margin="79,42,0,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="16"/>
+        <Button x:Name="btnNuevo" Content="Nuevo" HorizontalAlignment="Left" Margin="79,130,0,0" VerticalAlignment="Top" Width="80" Height="26" Click="btnNuevo_Click"/>
+        <Button x:Name="btnBorrar" Content="Borrar" HorizontalAlignment="Left" Margin="360,130,0,0" VerticalAlignment="Top" Width="91" Height="26" Click="btnBorrar_Click"/>
+        <DataGrid HorizontalAlignment="Left" ItemsSource="{Binding Path=ListaPersonas}" Height="188" Margin="79,197,0,0" VerticalAlignment="Top" Width="372"/>
 
     </Grid>
 </Window>

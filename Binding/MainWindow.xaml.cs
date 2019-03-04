@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,16 +21,27 @@ namespace Binding
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<Persona> ListaPersonas { get; set; }
+        public ObservableCollection<Persona> ListaPersonas { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
-            ListaPersonas = new List<Persona>();
+            ListaPersonas = new ObservableCollection<Persona>();
             ListaPersonas.Add(new Persona("Elver", "Galarga"));
             ListaPersonas.Add(new Persona("Mary", "Conazo"));
             this.DataContext = this; //define el contexto de los datos 
 
+        }
+
+        private void btnNuevo_Click(object sender, RoutedEventArgs e)
+        {
+            ListaPersonas.Add(new Persona("Lisa", "Ann"));
+        }
+
+        private void btnBorrar_Click(object sender, RoutedEventArgs e)
+        {
+
+            ListaPersonas.RemoveAt(0);
         }
     }
 }
