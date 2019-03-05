@@ -43,5 +43,11 @@ namespace Binding
 
             ListaPersonas.RemoveAt(0);
         }
+
+        private void btnModificar_Click(object sender, RoutedEventArgs e)
+        {
+            ListaPersonas.ElementAt(0).Nombre = "Lomito";
+            ListaPersonas.ElementAt(0).Apellido = "Lito";
+        }
     }
 }
